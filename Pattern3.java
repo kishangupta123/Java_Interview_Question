@@ -1,31 +1,13 @@
-package java_Interview_program.pattern;
-
-import java.util.Scanner;
-
-/*
-Write a Java Program to print the following Pattern
-1 1 1 1 1
-2 2 2 2 2
-3 3 3 3 3
-4 4 4 4 4
-5 5 5 5 5
-*/
-
+package Pattern.Assignment;
 
 public class Pattern3 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number of rows to print the pattern :: ");
-        int N = Integer.parseInt(scanner.nextLine().trim());
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < 5; j++)
-                if (j == 4)
-                    System.out.print((i + 1) + "");
-                else
-                    System.out.print(i + 1 + " ");
-            if (i < N - 1)
-                System.out.println("");
-        }
-        scanner.close();
-    }
+	public static void main(String[] args) {
+		int n = 5;
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				System.out.print(j % 2 + " ");
+			}
+		System.out.println();
+		}
+	}
 }
