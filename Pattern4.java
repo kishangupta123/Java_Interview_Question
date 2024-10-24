@@ -1,36 +1,16 @@
-package java_Interview_program.pattern;
-
-import java.util.Scanner;
-
-/*
-Write a Java Program to print the following Pattern
-9 9 9 9 9 9 9 9 9
-  7 7 7 7 7 7 7
-    5 5 5 5 5
-      3 3 3
-        1
-*/
+package Pattern.Assignment;
 
 public class Pattern4 {
-    public static void main(String args[]) throws Exception {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Number of rows u want to print :: ");
-        int N = Integer.parseInt(scanner.nextLine().trim());
-        int d = 2 * N - 1;
-        int k = 0;
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < k; j++)
-                System.out.print("  ");
-            for (int j = 0; j < d; j++)
-                if (j == 0)
-                    System.out.print(d);
-                else
-                    System.out.print(" " + d);
-            d -= 2;
-            k++;
-            if (i < N - 1)
-                System.out.println();
+    public static void main(String[] args) {
+        int n = 5; 
+        int count = 1; 
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j <= 5; j++) { 
+                System.out.printf("%3d", count);
+                count++; 
+            }
+            System.out.println(); 
         }
-        scanner.close();
     }
 }
